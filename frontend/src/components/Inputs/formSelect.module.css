@@ -1,0 +1,124 @@
+/* ===============================
+   BASE
+================================ */
+
+.selectGroup {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+/* ===============================
+   LABEL
+================================ */
+
+.label {
+  font-size: var(--font-small);
+
+  font-weight: 500;
+}
+
+/* ===============================
+   SELECT BASE
+================================ */
+
+.select {
+  border-radius: var(--border-radius);
+
+  border: 1px solid var(--border-color);
+
+  font-family: var(--font-family);
+
+  font-size: var(--font-input);
+
+  background-color: var(--color-background);
+
+  color: var(--color-text);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+}
+
+.select:disabled {
+  background-color: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  border-color: var(--color-disabled-border);
+  cursor: not-allowed;
+}
+
+/* ===============================
+   VARIANT
+================================ */
+
+.primary {
+  border-color: var(--border-color);
+}
+
+.danger {
+  border-color: var(--color-danger);
+}
+
+.success {
+  border-color: var(--color-success);
+}
+
+/* ===============================
+   SIZE
+================================ */
+
+.small {
+  height: 32px;
+
+  padding: 0 10px;
+}
+
+.medium {
+  height: 40px;
+
+  padding: 0 12px;
+}
+
+.large {
+  height: 48px;
+
+  padding: 0 14px;
+}
+
+/* ===============================
+   WIDTH
+================================ */
+
+.fullWidth {
+  width: 100%;
+}
+
+.autoWidth {
+  width: auto;
+}
+
+.customWidth {
+  width:80px;
+}
+
+/* ===============================
+   ERROR
+================================ */
+
+.errorInput {
+  border-color: var(--color-danger);
+}
+
+.errorText {
+  color: var(--color-danger);
+
+  font-size: var(--font-small);
+}

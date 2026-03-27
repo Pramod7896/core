@@ -1,0 +1,222 @@
+/* ===============================
+   BASE BUTTON
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-family: var(--font-family);
+  font-size: var(--font-button);
+  font-weight: 500;
+
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  white-space: nowrap;
+
+  position: relative;
+}
+
+
+/* ===============================
+   VARIANTS
+================================ */
+
+.primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.primary:hover:not(.disabled) {
+  background: #004494;
+}
+
+.secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.secondary:hover:not(.disabled) {
+  background: #5a6268;
+}
+
+.success {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.success:hover:not(.disabled) {
+  background: #218838;
+}
+
+.danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.danger:hover:not(.disabled) {
+  background: #c82333;
+}
+
+.warning {
+  background: var(--color-warning);
+  color: #000;
+}
+
+.info {
+  background: var(--color-info);
+  color: #fff;
+}
+
+.light {
+  background: var(--color-light);
+  color: #000;
+  border: 1px solid var(--border-color);
+}
+
+.dark {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+
+/* ===============================
+   OUTLINE
+================================ */
+
+.outlinePrimary {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.outlinePrimary:hover:not(.disabled) {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+
+/* ===============================
+   SIZES (FIXED HEIGHT)
+================================ */
+
+.small {
+
+  height: 32px;
+
+  padding: 0 12px;
+
+  font-size: var(--font-small);
+}
+
+.medium {
+
+  height: 40px;
+
+  padding: 0 10px;
+
+}
+
+.large {
+
+  height: 48px;
+
+  padding: 0 20px;
+
+  font-size: var(--font-body);
+}
+
+
+/* ===============================
+   WIDTH
+================================ */
+
+.fullWidth {
+
+  width: 100%;
+}
+
+.autoWidth {
+
+  width: auto;
+}
+
+
+/* ===============================
+   DISABLED
+================================ */
+
+.disabled {
+
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  pointer-events: none;
+}
+
+
+/* ===============================
+   LOADING TEXT
+================================ */
+
+.loadingText {
+
+  visibility: hidden;
+}
+
+
+/* ===============================
+   SPINNER
+================================ */
+
+.spinner {
+
+  position: absolute;
+
+  width: 16px;
+
+  height: 16px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(255,255,255,0.3);
+
+  border-top: 2px solid #fff;
+
+  animation: spin 0.6s linear infinite;
+}
+
+
+/* ===============================
+   SPINNER DARK
+================================ */
+
+.light .spinner,
+.warning .spinner {
+
+  border: 2px solid rgba(0,0,0,0.2);
+
+  border-top: 2px solid #000;
+}
+
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes spin { 
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}

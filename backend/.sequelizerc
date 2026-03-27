@@ -1,0 +1,8 @@
+import path from "path";
+
+export default {
+  config: path.resolve("config", "sequelize-cli.js"),
+  "models-path": path.resolve("models"),
+  "migrations-path": path.resolve("migrations"),
+  "seeders-path": path.resolve("seeders")
+};

@@ -1,0 +1,31 @@
+.headerWrapper {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.leftSection {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.rightSection {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.entriesLabel {
+  font-size: 14px;
+
+  color: #555;
+}

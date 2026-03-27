@@ -1,0 +1,135 @@
+/* src/theme/bootstrapOverrides.css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+/* ---------------------------
+   Font Sizes & Single Family
+--------------------------- */
+:root {
+  --font-family: "Nunito", sans-serif; /* single font for entire app */
+
+  /* Font sizes */
+  --font-h1: 2.5rem;
+  --font-h2: 2rem;
+  --font-h3: 1.75rem;
+  --font-h4: 1.5rem;
+  --font-h5: 1.25rem;
+  --font-body: 1rem;
+  --font-small: 0.875rem;
+  --font-caption: 0.75rem;
+  --font-button: 1rem;
+  --font-input: 1rem;
+
+  /* For Table Css */
+
+  --even-table-color: #000;
+  --even-table-color-bg: #fff;
+
+  --odd-table-color: #000000;
+  --odd-table-color-bg: #efefef;
+
+  /* Colors */
+  --color-primary: #001A77;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-background: #f8f9fa;
+  --color-text: #212529;
+
+  /* Disabled controls */
+  --color-disabled-bg: #eef1f4;
+  --color-disabled-text: #6c757d;
+  --color-disabled-border: #d8dde3;
+
+  --border-radius: 0.5rem;
+  --border-color: #dee2e6;
+}
+
+/* ---------------------------
+   Dark Mode Overrides
+--------------------------- */
+body.dark-mode {
+  --color-background: #121212;
+  --color-text: #f5f5f5;
+  --border-color: #333333;
+
+  --color-disabled-bg: #1f1f1f;
+  --color-disabled-text: #a7adb5;
+  --color-disabled-border: #3a3a3a;
+
+   --even-table-color: #fff;
+  --even-table-color-bg: #000;
+
+  --odd-table-color: #fff;
+  --odd-table-color-bg: #3e3e3e;
+}
+
+/* ---------------------------
+   Apply font to all elements
+--------------------------- */
+h1 { font-size: var(--font-h1); font-family: var(--font-family); }
+h2 { font-size: var(--font-h2); font-family: var(--font-family); }
+h3 { font-size: var(--font-h3); font-family: var(--font-family); }
+h4 { font-size: var(--font-h4); font-family: var(--font-family); }
+h5 { font-size: var(--font-h5); font-family: var(--font-family); }
+
+p, div, span, li { font-size: var(--font-body); font-family: var(--font-family); }
+.small { font-size: var(--font-small); font-family: var(--font-family); }
+.caption { font-size: var(--font-caption); font-family: var(--font-family); }
+
+button, input, textarea, select { font-family: var(--font-family); }
+button { font-size: var(--font-button); }
+input, textarea, select { font-size: var(--font-input); }
+
+/* ---------------------------
+   Bootstrap Button Hover
+--------------------------- */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #004494;
+  border-color: #004494;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* ---------------------------
+   Card Dark Mode
+--------------------------- */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #333333;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* ---------------------------
+   Disabled inputs (Bootstrap + custom)
+--------------------------- */
+
+input:disabled,
+textarea:disabled,
+select:disabled,
+.form-control:disabled,
+.form-select:disabled {
+  background-color: var(--color-disabled-bg) !important;
+  color: var(--color-disabled-text) !important;
+  border-color: var(--color-disabled-border) !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+input:disabled::placeholder,
+textarea:disabled::placeholder {
+  color: var(--color-disabled-text);
+  opacity: 0.75;
+}

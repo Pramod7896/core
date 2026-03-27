@@ -1,0 +1,10 @@
+.page-title {
+  font-weight: bold;
+}
+
+.page-title > span {
+  font-weight: bold;
+    font-size: var(--font-h5);
+}
+
+

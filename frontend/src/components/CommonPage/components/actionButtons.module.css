@@ -1,0 +1,25 @@
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem; /* space between icons */
+}
+
+.iconButton {
+  background: none;     /* no background */
+  border: none;         /* no border */
+  padding: 0;           /* remove padding */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.iconButton:hover {
+  opacity: 0.7;         /* subtle hover effect */
+}
+
+.iconImage {
+  width: 18px;          /* icon size */
+  height: 18px;
+  display: block;
+}

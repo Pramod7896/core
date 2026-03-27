@@ -1,0 +1,105 @@
+/* Topbar container */
+
+.topbar {
+  height: 50px;
+
+  background: var(--color-light);
+
+  border-bottom: 1px solid var(--border-color);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 10px;
+}
+
+/* Left section */
+
+.topbar-left {
+  display: flex;
+
+  align-items: center;
+}
+
+.topbar-page-title {
+  margin: 0;
+
+  font-size: var(--font-h3);
+
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+/* Right section */
+
+.topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* Username */
+
+.topbar-username {
+  font-size: var(--font-body);
+}
+
+/* Avatar */
+
+.topbar-avatar {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  user-select: none;
+}
+
+.topbar-avatar img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Hover */
+
+.topbar-avatar:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode */
+
+body.dark-mode .topbar {
+  background: var(--color-dark);
+
+  color: white;
+}
+
+body.dark-mode .topbar-page-title {
+  color: white;
+}

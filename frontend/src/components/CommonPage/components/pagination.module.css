@@ -1,0 +1,51 @@
+/* Footer wrapper */
+.footer {
+  background-color: var(--color-light);
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-color);
+  z-index: 10;
+}
+
+/* Remove margin from pagination inside footer */
+.table-footer .pagination {
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Disabled page item style */
+.table-footer .page-item.disabled .page-link {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Active page item style: white background, black text */
+.table-footer  .page-item.active .page-link {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+/* Default page links: black background, white text */
+.table-footer .page-link {
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+/* Hover effect for non-active links */
+.table-footer .page-item:not(.active) .page-link:hover {
+  background-color: #1f1f1f;
+  border-color: #1f1f1f;
+  color: #fff;
+}
+
+/* Small text for showing entries */
+.refresh-prompts {
+  font-size: var(--font-small);
+  color: var(--color-text);
+}

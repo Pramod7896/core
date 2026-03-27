@@ -1,0 +1,162 @@
+/* -----------------------------
+   Login Container
+----------------------------- */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+}
+
+.loginForm {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* -----------------------------
+   Left Image Slider
+----------------------------- */
+.login-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: none; /* hide on mobile, show on desktop */
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-slide.active {
+  opacity: 1;
+}
+
+.slide-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 300px;
+  height: auto;
+}
+
+/* -----------------------------
+   Mobile Logo
+----------------------------- */
+.mobile-logo {
+  display: block;
+  width: 120px;
+  margin: 1rem auto;
+}
+
+.forgot-password-link {
+  font-size: var(--font-small);
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Remove blue border / outline on focus for OTP inputs */
+.d-flex >.otp-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ced4da ; /* optional: keep default bootstrap border color */
+}
+
+@media (min-width: 768px) {
+  .login-left {
+    display: block;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+}
+
+/* -----------------------------
+   Right Form
+----------------------------- */
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.zerobox-logo {
+  width: 180px;
+  height: auto;
+}
+
+/* -----------------------------
+   Form Styling
+----------------------------- */
+/* .login-form {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+} */
+
+.login-form h3 {
+  font-size: var(--font-h3);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-form p {
+  font-size: var(--font-body);
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+
+/* -----------------------------
+   Password Eye Toggle (uses existing span in JSX)
+----------------------------- */
+.login-form span {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  z-index: 2;
+  font-size: 1.1rem;
+}
+
+/* -----------------------------
+   Responsive Adjustments
+----------------------------- */
+@media (max-width: 767px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-right {
+    padding: 1rem;
+  }
+}
